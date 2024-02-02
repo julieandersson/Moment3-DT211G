@@ -1,0 +1,16 @@
+{
+  "name": "moment3-dt211g",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Julie Andersson",
+  "license": "ISC",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "parcel": "^2.11.0"
+  }
+}
