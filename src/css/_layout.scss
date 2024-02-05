@@ -79,8 +79,8 @@ header {
 
   .reset-button {
     background-color: red;
-    width: 120px;
-    height: 40px;
+    width: 130px;
+    height: 45px;
     border-radius: 5px;
     color: black;
     font-size: 1em;
@@ -106,6 +106,8 @@ nav {
     width: 250px;
     display: none;
 }
+
+/* NESTING FÖR NAV */
 
 nav {
     
