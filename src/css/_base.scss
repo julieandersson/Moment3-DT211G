@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$primary-font: 'Lato', sans-serif;
 $primary-blue: rgb(158, 201, 216);
 $hover-blue: darken($primary-blue, 20%);
-$menu-white: #fff;
+$background-blue: lighten($primary-blue, 25%);
+$standard-white: #fff;
 $menu-border: white solid 2px;

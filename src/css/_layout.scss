@@ -4,6 +4,21 @@
     margin: 0;
 }
 
+body {
+    background-color: base.$background-blue;
+}
+
+main {
+    background-color: base.$standard-white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+p, h1 {
+    font-family: base.$primary-font;
+}
+
 /* Generell design av header */
 header {
     height: 100px;
@@ -17,7 +32,8 @@ header {
 }
 
 .logo a {
-    color: base.$menu-white;
+    font-family: base.$primary-font;
+    color: base.$standard-white;
     font-size: 0.8em;
     margin: 0;
     text-decoration: none;
@@ -25,6 +41,7 @@ header {
 
 /* Design av meny för mobilenheter, placeras till höger om skärmen */
 nav {
+    font-family: base.$primary-font;
     background-color: base.$primary-blue;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
     font-size: 1.4em;
@@ -52,7 +69,7 @@ nav {
   }
 
     a {
-    color: base.$menu-white;
+    color: base.$standard-white;
     text-decoration: none;
     padding: 0 1em;
   }
@@ -91,13 +108,13 @@ nav {
     display: block;
     width: 20px;
     height: 3px;
-    background-color: base.$menu-white;
+    background-color: base.$standard-white;
     margin: 5px 0;
 }
 
 .menu-text {
     font-size: 1.2em;
-    color: base.$menu-white;
+    color: base.$standard-white;
 }
 
 /* Meny knapp, stäng */
