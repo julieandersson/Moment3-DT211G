@@ -1,4 +1,5 @@
 @use "base";
+@use "component";
 
 * {
     margin: 0;
@@ -10,13 +11,19 @@ body {
 
 main {
     background-color: base.$standard-white;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: base.$shadow-color;
 }
 
 p, h1 {
     font-family: base.$primary-font;
+}
+
+h1 {
+    text-align: center;
 }
 
 /* Generell design av header */
@@ -39,11 +46,35 @@ header {
     text-decoration: none;
 }
 
+.contact-form {
+    background-color: base.$background-blue;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: base.$shadow-color;
+  }
+  
+  label {
+    font-family: base.$primary-font;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
 /* Design av meny för mobilenheter, placeras till höger om skärmen */
 nav {
     font-family: base.$primary-font;
     background-color: base.$primary-blue;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
+    box-shadow: base.$shadow-color;
     font-size: 1.4em;
     position: absolute;
     right: 0;
@@ -96,7 +127,7 @@ nav {
 
 .menu-btn:hover {
     background-color: base.$hover-blue;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
+    box-shadow: 0px 0px 5px 5px #757575;
 }
 
 .menu-icon {
