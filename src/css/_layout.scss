@@ -15,7 +15,7 @@ main {
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 5px;
-    box-shadow: base.$shadow-color;
+    @include component.custom-box-shadow;
 }
 
 p, h1 {
@@ -46,6 +46,8 @@ header {
     text-decoration: none;
 }
 
+/* KONTAKTFORMULÄR PÅ KONTAKT-SIDAN */
+
 .contact-form {
     background-color: base.$background-blue;
     padding: 20px;
@@ -53,7 +55,7 @@ header {
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
-    box-shadow: base.$shadow-color;
+    @include component.custom-box-shadow;
   }
   
   label {
@@ -70,11 +72,24 @@ header {
     box-sizing: border-box;
   }
 
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reset-button {
+    @include component.button($bgColor: red);
+  }
+
+  .send-button {
+    @include component.button($bgColor: green);
+  }
+
 /* Design av meny för mobilenheter, placeras till höger om skärmen */
 nav {
     font-family: base.$primary-font;
     background-color: base.$primary-blue;
-    box-shadow: base.$shadow-color;
+    @include component.custom-box-shadow;
     font-size: 1.4em;
     position: absolute;
     right: 0;
@@ -127,7 +142,7 @@ nav {
 
 .menu-btn:hover {
     background-color: base.$hover-blue;
-    box-shadow: 0px 0px 5px 5px #757575;
+    @include component.custom-box-shadow;
 }
 
 .menu-icon {

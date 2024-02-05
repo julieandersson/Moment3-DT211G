@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+/* primär text */
 $primary-font: 'Lato', sans-serif;
 $primary-blue: rgb(158, 201, 216);
 $hover-blue: darken($primary-blue, 20%);
 $background-blue: lighten($primary-blue, 25%);
 $standard-white: #fff;
 $menu-border: white solid 2px;
-$shadow-color: 0px 2px 5px 5px #e4e4e4;
-@mixin button($bgColor) {
-    background-color: $bgColor; 
-    border: none;
-    color: white;
-    font-size: 1em;
-}
