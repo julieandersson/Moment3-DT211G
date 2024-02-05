@@ -78,11 +78,19 @@ header {
   }
 
   .reset-button {
-    @include component.button($bgColor: red);
+    background-color: red;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
   }
 
+/* EXTEND FÖR KNAPPAR */
   .send-button {
-    @include component.button($bgColor: green);
+    @extend .reset-button;
+    background-color: green;
   }
 
 /* Design av meny för mobilenheter, placeras till höger om skärmen */

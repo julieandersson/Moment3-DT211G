@@ -1,14 +1,3 @@
-/* mixin för knappar */
-@mixin button($bgColor) {
-    background-color: $bgColor;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    color: black;
-    font-size: 1em;
-    cursor: pointer;
-}
-
 /* mixin för skuggor */
 
 @mixin custom-box-shadow {
