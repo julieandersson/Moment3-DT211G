@@ -2,8 +2,17 @@
 
 /* primär text */
 $primary-font: 'Lato', sans-serif;
+
+/* färger */
 $primary-blue: rgb(158, 201, 216);
 $hover-blue: darken($primary-blue, 20%);
-$background-blue: lighten($primary-blue, 25%);
+$background-blue: lighten($primary-blue, 15%);
 $standard-white: #fff;
 $menu-border: white solid 2px;
+
+/* Mörkt tema */
+$primary-blue-darkmode: rgb(77, 116, 130);
+$hover-blue-darkmode: darken($primary-blue-darkmode, 20%);
+$background-blue-darkmode: lighten($primary-blue-darkmode, 30%);
+$standard-white-darkmode: #ffffff;
+$menu-border-darkmode: rgb(0, 0, 0) solid 2px;

@@ -97,7 +97,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 20px;
+    padding: 50px;
 }
 
 .picture-grid img {
@@ -243,4 +243,51 @@ nav {
         display: inline;
         padding: 1.2em 0;
     }
+}
+
+/* mörkt och ljust tema */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: base.$background-blue-darkmode;
+    }
+    main {
+        background-color: base.$standard-white-darkmode;
+        @include component.custom-box-shadow-darkmode;
+    }
+    header {
+        background-color: base.$primary-blue-darkmode;
+    }
+    .logo a {
+        color: base.$standard-white-darkmode;
+    }
+    .contact-form {
+        background-color: base.$background-blue-darkmode;
+        @include component.custom-box-shadow-darkmode;
+    }
+    nav {
+        background-color: base.$primary-blue-darkmode;
+    }
+    nav a {
+        color: base.$standard-white-darkmode;
+    }
+    nav li:hover {
+    background-color: base.$hover-blue-darkmode;
+    }
+    .menu-btn {
+    background-color: base.$primary-blue-darkmode;
+    border: base.$menu-border;
+    @include component.custom-box-shadow-darkmode;
+    }
+    .menu-btn:hover {
+    background-color: base.$hover-blue-darkmode;
+    @include component.custom-box-shadow-darkmode;
+    }
+    .bars {
+    background-color: base.$standard-white-darkmode;
+    }
+    
+    .menu-text {
+    color: base.$standard-white-darkmode;
+    }
+
 }

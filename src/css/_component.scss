@@ -1,5 +1,9 @@
 /* mixin för skuggor */
 
 @mixin custom-box-shadow {
-    box-shadow: 0px 0px 5px 5px #cdcdcd;
+    box-shadow: 0px 6px 10px #515151;
+  }
+
+  @mixin custom-box-shadow-darkmode {
+    box-shadow: 0px 8px 8px #383838;
   }
