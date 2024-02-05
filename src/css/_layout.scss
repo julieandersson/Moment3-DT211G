@@ -93,6 +93,17 @@ header {
     background-color: green;
   }
 
+  .picture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.picture-grid img {
+    width: 100%;
+}
+
 /* Design av meny för mobilenheter, placeras till höger om skärmen */
 nav {
     font-family: base.$primary-font;
