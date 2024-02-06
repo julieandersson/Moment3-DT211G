@@ -143,6 +143,39 @@ i {
     @include component.border-style(false);
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.container img {
+    @include component.border-style(false);  
+    }
+
+/* OM MIG SIDA */
+
+.about img {
+    border-radius: 50%;
+}
+
+.about-content {
+    column-count: 2;
+    column-gap: 2px;
+    padding: 5%;
+}
+
+.about-content p {
+    text-align: left;
+}
+
+article p {
+    font-size: 1em;
+    line-height: 1.3em;
+}
+
 /* Design av meny för mobilenheter, placeras till höger om skärmen */
 nav {
     font-family: base.$primary-font;
@@ -334,6 +367,10 @@ nav {
 
     .picture-grid img {
     @include component.border-style(true);
+    }
+
+    .container img {
+    @include component.border-style(true);  
     }
 
     section a {
