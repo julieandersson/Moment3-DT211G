@@ -19,13 +19,29 @@ main {
     @include component.custom-box-shadow;
 }
 
-p, h1 {
+p, h1, h2 {
     font-family: base.$primary-font;
+    color: base.$standard-black;
 }
 
-h1, footer p {
+h1, h2, footer p {
     text-align: center;
 }
+
+section p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+section a {
+    @include component.link;
+}
+
+section a:hover {
+    color: base.$standard-black;
+}
+
 
 footer p {
     padding-top: 30px;
@@ -55,6 +71,10 @@ header {
     font-size: 0.8em;
     margin: 0;
     text-decoration: none;
+}
+
+i {
+    @include component.icon;
 }
 
 /* KONTAKTFORMULÄR PÅ KONTAKT-SIDAN */
@@ -279,6 +299,7 @@ nav {
     }
     .logo a {
         color: base.$standard-white-darkmode;
+        text-shadow: base.$text-shadow-darkmode;
     }
     .contact-form {
         background-color: base.$background-blue-darkmode;
@@ -286,6 +307,7 @@ nav {
     }
     nav {
         background-color: base.$primary-blue-darkmode;
+        text-shadow: base.$text-shadow-darkmode;
     }
     nav a {
         color: base.$standard-white-darkmode;
@@ -312,6 +334,14 @@ nav {
 
     .picture-grid img {
     @include component.border-style(true);
+    }
+
+    section a {
+        @include component.link-darkmode;
+    }
+
+    footer {
+        background-color: base.$primary-blue-darkmode;
     }
 
 }
