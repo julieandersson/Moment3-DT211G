@@ -1,9 +1,17 @@
-/* mixin för skuggor */
+/* mixin för skuggor i ljust och mörkt tema */
 
 @mixin custom-box-shadow {
     box-shadow: 0px 6px 10px #515151;
   }
-
   @mixin custom-box-shadow-darkmode {
     box-shadow: 0px 8px 8px #383838;
+  }
+
+/* Mixin för border på bilder med if/else sats */
+@mixin border-style($rounded: true) {
+    @if $rounded {
+      border-radius: 10px;
+    } @else {
+      border-radius: 0;
+    }
   }

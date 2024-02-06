@@ -9,6 +9,7 @@ $hover-blue: darken($primary-blue, 20%);
 $background-blue: lighten($primary-blue, 15%);
 $standard-white: #fff;
 $menu-border: white solid 2px;
+$text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 /* Mörkt tema */
 $primary-blue-darkmode: rgb(77, 116, 130);
@@ -16,3 +17,7 @@ $hover-blue-darkmode: darken($primary-blue-darkmode, 20%);
 $background-blue-darkmode: lighten($primary-blue-darkmode, 30%);
 $standard-white-darkmode: #ffffff;
 $menu-border-darkmode: rgb(0, 0, 0) solid 2px;
+
+// variabler för mörkt och ljust tema
+$dark-border-radius: 10px;
+$light-border-radius: 0;
