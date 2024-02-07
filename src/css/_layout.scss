@@ -463,6 +463,15 @@ article p {
     .picture-grid img {
         width: 100%;
     }
+
+    .container {
+        padding: 10px;
+      }
+
+    .container img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 /* MOBILE */
@@ -511,6 +520,15 @@ article p {
         width: 80%;
         margin: 0 auto;
         line-height: 1.6em;
+    }
+
+    .container {
+        padding: 10px;
+      }
+
+    .container img {
+        max-width: 100%;
+        height: auto;
     }
 
     footer p {
