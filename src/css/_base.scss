@@ -16,7 +16,8 @@ $text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 $primary-blue-darkmode: rgb(77, 116, 130);
 $hover-blue-darkmode: darken($primary-blue-darkmode, 20%);
 $background-blue-darkmode: lighten($primary-blue-darkmode, 30%);
-$standard-white-darkmode: #ffffff;
+$standard-white-darkmode: #fff;
+$standard-black-darkmode: #fff;
 $menu-border-darkmode: rgb(0, 0, 0) solid 2px;
 $text-shadow-darkmode: 2px 2px 4px rgba(0, 0, 0, 0.5);
 

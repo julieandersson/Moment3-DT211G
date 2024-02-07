@@ -194,6 +194,7 @@ section a:hover {
 
 footer p {
     padding-top: 30px;
+    color: base.$standard-black;
 }
 
 footer {
@@ -328,6 +329,9 @@ article p {
     .contact-form {
         background-color: base.$background-blue-darkmode;
         @include component.custom-box-shadow-darkmode;
+    }
+    footer p {
+        color: base.$standard-black-darkmode;
     }
     nav {
         background-color: base.$primary-blue-darkmode;
@@ -474,7 +478,7 @@ article p {
     }
 
     .contact-form {
-        max-width: 100%;
+        max-width: auto;
         margin: 0 auto;
     }
 
@@ -538,7 +542,7 @@ article p {
     }
 
     .contact-form {
-        max-width: 80%;
+        max-width: 65%;
         margin: 0 auto;
     }
 
