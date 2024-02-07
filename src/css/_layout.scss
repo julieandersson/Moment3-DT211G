@@ -354,28 +354,22 @@ article p {
     }
     .bars {
     background-color: base.$standard-white-darkmode;
-    }
-    
+    }  
     .menu-text {
     color: base.$standard-white-darkmode;
     }
-
     .picture-grid img {
     @include component.border-style(true);
     }
-
     .container img {
     @include component.border-style(true);  
     }
-
     section a {
         @include component.bluelink-darkmode;
     }
-
     .links a {
         @include component.link-darkmode;
     }
-
     footer {
         background-color: base.$primary-blue-darkmode;
     }
