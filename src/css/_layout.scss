@@ -28,10 +28,15 @@ h1, h2, footer p {
     text-align: center;
 }
 
+section {
+    width: 70%;
+    margin: 0 auto;
+}
+
 section p {
     text-align: center;
     font-size: 1.1em;
-    line-height: 1.6em;
+    line-height: 1.8em;
 }
 
 section a {
@@ -285,45 +290,6 @@ nav {
     top: -3px;
 }
 
-/* Media querys */
-
-/* Större skärmas - gör menyn som inline */
-@media only screen and (min-width: 1083px) {
-    header {
-        padding: 0 3em;
-    }
-
-    .menu-btn {
-        display: none;
-    }
-
-    #open-menu {
-        display: none !important;
-    }
-
-    header {
-        position: static;
-    }
-
-    nav {
-        display: block !important;
-        position: static;
-        box-shadow: 0 0px 0px;
-        height: auto;
-        font-size: 1.4em;
-        width: auto;
-    }
-
-    nav ul {
-        height: 100%;
-    }
-
-    nav li {
-        display: inline;
-        padding: 1.2em 0;
-    }
-}
-
 /* mörkt och ljust tema */
 @media (prefers-color-scheme: dark) {
     body {
@@ -387,4 +353,148 @@ nav {
         background-color: base.$primary-blue-darkmode;
     }
 
+}
+
+/* Media querys */
+
+/* Större skärmas - gör menyn som inline */
+@media only screen and (min-width: 1083px) {
+    header {
+        padding: 0 3em;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    #open-menu {
+        display: none !important;
+    }
+
+    header {
+        position: static;
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        box-shadow: 0 0px 0px;
+        height: auto;
+        font-size: 1.4em;
+        width: auto;
+    }
+
+    nav ul {
+        height: 100%;
+    }
+
+    nav li {
+        display: inline;
+        padding: 1.2em 0;
+    }
+}
+
+/* egen media query för OM MIG-sida */
+@media only screen and (max-width: 1130px) {
+    .about-content {
+        width: auto;
+        column-count: 1; 
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 50%;
+    }
+
+    .about-content h2 {
+        padding-top: 30px;
+    }
+
+    .about-content p {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        line-height: 1.6em;
+    }
+
+}
+
+/* Tablets */
+
+@media only screen and (min-width: 700px) and (max-width: 940px) {
+
+    section {
+        width: 70%;
+    }
+
+    section p {
+        font-size: 1.2em;
+    }
+
+    .picture-grid {
+        gap: 20px;
+        padding: 30px;
+    }
+    
+    .picture-grid img {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 699px) {
+
+    section {
+        width: 80%;
+    }
+
+    section p {
+        font-size: 1.2em;
+    }
+
+    .container img {
+        width: auto;
+    }
+
+    .picture-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 30px;
+    }
+    
+    .picture-grid img {
+        width: 100%;
+    }
+    
+    .about-content {
+        width: auto;
+        column-count: 1; 
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 80%;
+    }
+
+    .about-content h2 {
+        padding-top: 30px;
+    }
+
+    .about-content p {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        line-height: 1.6em;
+    }
+
+    footer p {
+        padding-top: 40px;
+        font-size: 0.8em;
+    }
+    
+    footer {
+        height: 90px;
+    }
 }
