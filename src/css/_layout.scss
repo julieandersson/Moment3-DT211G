@@ -9,59 +9,7 @@ body {
     background-color: base.$background-blue;
 }
 
-main {
-    background-color: base.$standard-white;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    @include component.custom-box-shadow;
-}
-
-p, h1, h2 {
-    font-family: base.$primary-font;
-    color: base.$standard-black;
-}
-
-h1, h2, footer p {
-    text-align: center;
-}
-
-section {
-    width: 70%;
-    margin: 0 auto;
-}
-
-section p {
-    text-align: center;
-    font-size: 1.1em;
-    line-height: 1.8em;
-}
-
-section a {
-    @include component.bluelink;
-}
-
-section a:hover {
-    color: base.$standard-black;
-}
-
-.links a {
-    @include component.link;
-}
-
-
-footer p {
-    padding-top: 30px;
-}
-
-footer {
-    background-color: base.$primary-blue;
-    height: 80px;
-}
-
-/* Generell design av header */
+/* STYLING AV HEADER OCH LOGOTYP */
 header {
     height: 100px;
     background-color: base.$primary-blue;
@@ -80,10 +28,226 @@ header {
     box-shadow: 2px 2px 7px #0e0e0e;
 }
 
+/* IKONER */
+
 i {
     @include component.icon;
 }
 
+/* STYLING AV RESPONSIV MENY FÖR TABLETS OCH MOBILE, placeras till höger om skärmen */
+
+nav {
+    font-family: base.$primary-font;
+    text-shadow: base.$text-shadow;
+    background-color: base.$primary-blue;
+    @include component.custom-box-shadow;
+    font-size: 1.4em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    display: none;
+}
+
+/* NESTING FÖR NAV */
+nav {
+    
+    ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+    li {
+    padding: 0.8em 0;
+    width: 100%;
+  }
+
+   i {
+    font-size: 18px;
+   }
+
+    a {
+    color: base.$standard-white;
+    text-decoration: none;
+    padding: 0 1em;
+  }
+
+    li:hover {
+    background-color: base.$hover-blue;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+}
+
+/* ÖPPNA MENY-KNAPP */
+.menu-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: base.$primary-blue;
+    border: base.$menu-border;
+    cursor: pointer;
+}
+
+.open {
+    margin: 0 1em;
+}
+
+.menu-btn:hover {
+    background-color: base.$hover-blue;
+    @include component.custom-box-shadow;
+}
+
+.menu-icon {
+    margin-right: 10px;
+}
+
+/* 3 SVARTA STRECK SOM BILDAR "HAMBURG-IKON" */
+.bars {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: base.$standard-white;
+    margin: 5px 0;
+}
+
+.menu-text {
+    font-size: 1.2em;
+    color: base.$standard-white;
+}
+
+/* STÄNG MENY-KNAPP */
+.close {
+    margin: 1em 1.5em;
+    padding: 10px 15px;
+
+}
+
+/* TVÅ LODRÄTA STRECK ROTERAT TILL ETT KRYSS */
+.cross1 {
+    width: 25px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+}
+
+.cross2 {
+    width: 25px;
+    transform: rotate(135deg);
+    position: relative;
+    top: -3px;
+}
+
+
+/* STYLING FÖR MAIN, SECTION, RUBRIKER, BRÖDTEXT (inkluderar startsida och sass-sida) */
+
+main {
+    background-color: base.$standard-white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    @include component.custom-box-shadow;
+}
+
+section {
+    width: 70%;
+    margin: 0 auto;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8em;
+}
+
+p, h1, h2 {
+    font-family: base.$primary-font;
+    color: base.$standard-black;
+}
+
+h1, h2, footer p {
+    text-align: center;
+}
+
+
+/* STYLING FÖR LÄNKAR */
+
+section a {
+    @include component.bluelink;
+}
+
+section a:hover {
+    color: base.$standard-black;
+}
+
+.links a {
+    @include component.link;
+}
+
+/* STYLING FÖR FOOTER */
+
+footer p {
+    padding-top: 30px;
+}
+
+footer {
+    background-color: base.$primary-blue;
+    height: 80px;
+}
+
+/* STYLING FÖR BILDER PÅ STARTSIDA SAMT GALLERY */
+
+  .picture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.picture-grid img {
+    width: 100%;
+    @include component.border-style(false);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.container img {
+    @include component.border-style(false);  
+    }
+
+
+/* OM MIG SIDA */
+
+.about img {
+    border-radius: 50%;
+}
+
+.about-content {
+    column-count: 2;
+    column-gap: 2px;
+    padding: 5%;
+}
+
+.about-content p {
+    text-align: left;
+}
+
+article p {
+    font-size: 1em;
+    line-height: 1.3em;
+}
 
 /* KONTAKTFORMULÄR PÅ KONTAKT-SIDAN */
 
@@ -139,160 +303,9 @@ i {
     background-color: green;
   }
 
-  .picture-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 50px;
-}
 
-.picture-grid img {
-    width: 100%;
-    @include component.border-style(false);
-}
+/* MÖRKT OCH LJUST TEMA */
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-
-.container img {
-    @include component.border-style(false);  
-    }
-
-/* OM MIG SIDA */
-
-.about img {
-    border-radius: 50%;
-}
-
-.about-content {
-    column-count: 2;
-    column-gap: 2px;
-    padding: 5%;
-}
-
-.about-content p {
-    text-align: left;
-}
-
-article p {
-    font-size: 1em;
-    line-height: 1.3em;
-}
-
-/* Design av meny för mobilenheter, placeras till höger om skärmen */
-nav {
-    font-family: base.$primary-font;
-    text-shadow: base.$text-shadow;
-    background-color: base.$primary-blue;
-    @include component.custom-box-shadow;
-    font-size: 1.4em;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 250px;
-    display: none;
-}
-
-/* NESTING FÖR NAV */
-
-nav {
-    
-    ul {
-    width: 100%;
-    list-style-type: none;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-    li {
-    padding: 0.8em 0;
-    width: 100%;
-  }
-
-   i {
-    font-size: 18px;
-   }
-
-    a {
-    color: base.$standard-white;
-    text-decoration: none;
-    padding: 0 1em;
-  }
-
-    li:hover {
-    background-color: base.$hover-blue;
-    cursor: pointer;
-    border-radius: 40px;
-  }
-}
-
-/* Meny knapp, öppna meny */
-.menu-btn {
-    display: flex;
-    align-items: center;
-    padding: 8px 15px;
-    background-color: base.$primary-blue;
-    border: base.$menu-border;
-    cursor: pointer;
-}
-
-.open {
-    margin: 0 1em;
-}
-
-.menu-btn:hover {
-    background-color: base.$hover-blue;
-    @include component.custom-box-shadow;
-}
-
-.menu-icon {
-    margin-right: 10px;
-}
-
-/* de tre svarta strecken (hamburg-icon) */
-.bars {
-    display: block;
-    width: 20px;
-    height: 3px;
-    background-color: base.$standard-white;
-    margin: 5px 0;
-}
-
-.menu-text {
-    font-size: 1.2em;
-    color: base.$standard-white;
-}
-
-/* Meny knapp, stäng */
-.close {
-    margin: 1em 1.5em;
-    padding: 10px 15px;
-
-}
-
-/* Roterar två lodräda streck, till ett kryss */
-.cross1 {
-    width: 25px;
-    transform: rotate(45deg);
-    position: relative;
-    top: 5px;
-}
-
-.cross2 {
-    width: 25px;
-    transform: rotate(135deg);
-    position: relative;
-    top: -3px;
-}
-
-/* mörkt och ljust tema */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: base.$background-blue-darkmode;
@@ -361,9 +374,9 @@ nav {
 
 }
 
-/* MEDIA QUERIES
+/* ---MEDIA QUERIES--- */
 
-/* media query för menyn, gör som inline */
+/* MEDIA QUERY FÖR MENYN, GÖR SOM INLINE VID 1160PX */
 @media only screen and (min-width: 1160px) {
     header {
         padding: 0 3em;
@@ -400,7 +413,8 @@ nav {
     }
 }
 
-/* egen media query för OM MIG-sida */
+/* EGEN MEDIA QUERY FÖR OM MIG-SIDA */
+
 @media only screen and (max-width: 1130px) {
     .about-content {
         width: auto;
@@ -425,7 +439,7 @@ nav {
 
 }
 
-/* Tablets */
+/* TABLETS */
 
 @media only screen and (min-width: 700px) and (max-width: 940px) {
 
@@ -447,7 +461,7 @@ nav {
     }
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media only screen and (max-width: 699px) {
 
