@@ -40,11 +40,15 @@ section p {
 }
 
 section a {
-    @include component.link;
+    @include component.bluelink;
 }
 
 section a:hover {
     color: base.$standard-black;
+}
+
+.links a {
+    @include component.link;
 }
 
 
@@ -344,6 +348,10 @@ nav {
     }
 
     section a {
+        @include component.bluelink-darkmode;
+    }
+
+    .links a {
         @include component.link-darkmode;
     }
 

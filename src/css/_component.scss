@@ -16,19 +16,35 @@
     }
   }
 
-/* mixin för länkar i ljust och mörkt tema */
-@mixin link() {
+/* mixin för blå länkar i ljust och mörkt tema */
+@mixin bluelink() {
     font-size: 1.3em;
     color: rgb(67, 135, 195);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-decoration: none;  
 }
 
-@mixin link-darkmode() {
+@mixin bluelink-darkmode() {
     font-size: 1.3em;
     color: rgb(26, 80, 128);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-decoration: none;  
+}
+
+/* mixin för mindre, svarta länkar */
+
+@mixin link() {
+  font-size: 1em;
+  text-shadow: none;
+  color: black;
+  text-decoration: underline;
+}
+
+@mixin link-darkmode() {
+  font-size: 1em;
+  text-shadow: none;
+  color: black;
+  text-decoration: underline;
 }
 
 @mixin icon {
