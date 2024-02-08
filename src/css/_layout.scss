@@ -1,5 +1,6 @@
 @use "base";
 @use "component";
+@use "animations";
 
 * {
     margin: 0;
@@ -521,4 +522,19 @@ article p {
     footer {
         height: 90px;
     }
+}
+
+/* ANIMATIONER */
+
+/* Animation för roterande jordklot */
+
+#rotateEarth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    animation-name: rotateEarth;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
