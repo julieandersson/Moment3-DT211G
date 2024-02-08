@@ -551,3 +551,20 @@ article p {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+#translatePictures img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+#translatePictures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    animation-name: translatePictures;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
