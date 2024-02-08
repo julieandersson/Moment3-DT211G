@@ -176,6 +176,13 @@ h1, h2, footer p {
     text-align: center;
 }
 
+h2 {
+    animation-name: flicker;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 
 /* STYLING FÖR LÄNKAR */
 
@@ -524,7 +531,11 @@ article p {
     }
 }
 
-/* ANIMATIONER */
+
+/*--------ANIMATIONER--------*/
+
+
+/* rotate på jordklot */
 
 #rotateEarth {
     display: flex;
@@ -536,6 +547,8 @@ article p {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+
+/* färgskiftning på rubrik */
 
 #changeColorTitle {
     width: 300px;
@@ -549,6 +562,8 @@ article p {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+/* hover-effekt och rotate på bilder */
 
 .pictureContainer {
     width: 500px;
@@ -591,9 +606,7 @@ article p {
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-direction: alternate;
-
-    
+    animation-direction: alternate;  
 }
 
 .overlay:hover {

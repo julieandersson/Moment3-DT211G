@@ -43,3 +43,17 @@
         transform: rotate(1deg);
     }
 }
+
+/* skugga på rubriker som ändras över tid */
+
+@keyframes flicker {
+    0% {
+      text-shadow: 0 0 15px #0048ff;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff009d; 
+    }
+    100% {
+      text-shadow: 0 0 25px #009a86; 
+    }
+  }
