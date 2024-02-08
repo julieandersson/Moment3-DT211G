@@ -34,13 +34,12 @@
     }
 }
 
-/* translate bilder */
-
-@keyframes translatePictures {
+@keyframes pictureContainer {
     from {
-        transform: translate(0px, 0px);
+        transform: rotate(-1deg);
     }
+
     to {
-        transform: translate(0px, 20px);
+        transform: rotate(1deg);
     }
 }
