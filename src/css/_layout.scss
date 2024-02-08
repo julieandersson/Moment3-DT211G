@@ -464,6 +464,11 @@ article p {
     .picture-grid img {
         width: 100%;
     }
+
+    .pictureContainer img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 /* MOBILE */
@@ -522,6 +527,16 @@ article p {
     footer {
         height: 90px;
     }
+
+    .pictureContainer {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .pictureContainer:hover {
+        width: 100%;
+    }
+
 }
 
 
@@ -559,6 +574,9 @@ article p {
 /* hover-effekt och rotate på bilder */
 
 .pictureContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 500px;
     position: relative;
     margin: 0 auto;
