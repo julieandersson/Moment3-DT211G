@@ -176,13 +176,6 @@ h1, h2, footer p {
     text-align: center;
 }
 
-h2 {
-    animation-name: flicker;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
 
 /* STYLING FÖR LÄNKAR */
 
@@ -613,4 +606,14 @@ article p {
     opacity: 0.2;
     box-shadow: 0px 0px 8px 10px #000000;
 }
+
+/* skugga på h2-rubrik */
+
+#shaddowH2 {
+    animation-name: flicker;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 
