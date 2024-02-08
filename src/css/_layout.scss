@@ -469,6 +469,10 @@ article p {
         max-width: 100%;
         height: auto;
     }
+
+    #rotateEarth img {
+        width: auto;
+    }
 }
 
 /* MOBILE */
@@ -537,6 +541,9 @@ article p {
         width: 100%;
     }
 
+    #rotateEarth img {
+        width: 60%;
+    }
 }
 
 
