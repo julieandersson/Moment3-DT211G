@@ -49,6 +49,7 @@ nav {
     height: 100vh;
     width: 250px;
     display: none;
+    z-index: 9999;
 }
 
 /* NESTING FÖR NAV */
@@ -92,6 +93,7 @@ nav {
     background-color: base.$primary-blue;
     border: base.$menu-border;
     cursor: pointer;
+    z-index: 9999;
 }
 
 .open {
@@ -544,6 +546,11 @@ article p {
     #rotateEarth img {
         width: 60%;
     }
+
+    #shaddowH2 {
+        font-size: 20px;
+    }
+
 }
 
 
