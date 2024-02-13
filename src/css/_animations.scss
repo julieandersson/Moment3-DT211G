@@ -1,0 +1,59 @@
+/* transition rotate */
+@keyframes rotateEarth {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* keyframes för rubrik */
+@keyframes changeColorTitle {
+
+    0% {
+        background-color: rgb(185, 237, 244);
+    }
+
+    25% {
+        background-color: rgb(245, 207, 213);
+    }
+
+    50% {
+        background-color: rgb(133, 191, 249);
+    }
+
+    75% {
+        background-color: rgb(243, 164, 177);
+    }
+
+    100% {
+        background-color: rgb(247, 198, 252);
+    }
+}
+
+@keyframes pictureContainer {
+    from {
+        transform: rotate(-1deg);
+    }
+
+    to {
+        transform: rotate(1deg);
+    }
+}
+
+/* skugga på rubriker som ändras över tid */
+
+@keyframes flicker {
+    0% {
+      text-shadow: 0 0 15px #0048ff;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff009d; 
+    }
+    100% {
+      text-shadow: 0 0 25px #009a86; 
+    }
+  }
