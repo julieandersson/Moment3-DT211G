@@ -299,7 +299,8 @@ article p {
     cursor: pointer;
   }
 
-  /* EXTEND FÖR KNAPPAR */
+  /* EXTEND FÖR KNAPPAR, tar bort denna del för moment 4 då kontaktsida är utbytt mot animering-sidan,
+  kör extend på overlay istället.
 
   .reset-button {
     @extend .button;
@@ -310,6 +311,8 @@ article p {
     @extend .button;
     background-color: green;
   }
+
+  */
 
 
 /* MÖRKT OCH LJUST TEMA */
@@ -463,6 +466,15 @@ article p {
     
     .picture-grid img {
         width: 100%;
+    }
+
+    .pictureContainer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #rotateEarth img {
+        width: auto;
     }
 }
 
