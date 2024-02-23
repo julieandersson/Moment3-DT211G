@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.scss">
     <title>DT211G</title>
     <script src="js/main.js" type="module"></script>
+    <script src="js/diagram.js" type="module"></script>
 </head>
 <body>
 
@@ -41,8 +42,20 @@
         </nav>
     </header>
 
-    <main><br>
-
+    <main>
+        <h1>DIAGRAM</h1><br>
+    
+        <h2>Mest sökta kurser</h2>
+        <div id="barChartContainer">
+            <canvas id="subjectChart"></canvas>
+        </div>
+    
+        <h2>Mest sökta program</h2>
+        <div id="pieChartContainer">
+            <canvas id="educationChart"></canvas>
+        </div>
+    
+        <div id="errorMessage"></div>
     </main>
 
     <footer>
