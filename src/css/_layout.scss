@@ -169,12 +169,12 @@ section p {
     line-height: 1.8em;
 }
 
-p, h1, h2 {
+p, h1, h2, h3 {
     font-family: base.$primary-font;
     color: base.$standard-black;
 }
 
-h1, h2, footer p {
+h1, h2, h3, footer p {
     text-align: center;
 }
 
