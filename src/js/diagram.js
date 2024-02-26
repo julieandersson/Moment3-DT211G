@@ -17,10 +17,12 @@ async function init() {
     try {
         // Fetch-anrop
         const response = await fetch(url);
-        let data = await response.json();
+        const data = await response.json();
 
-        displayCourses(data);
-        displayPrograms(data);
+        const { courseData, programData } = processData(data);
+
+        displayCourses(courseData);
+        displayPrograms(programData);
 
     } catch (e) {
         console.log(e);
@@ -28,19 +30,46 @@ async function init() {
     }
 }
 
+function processData(data) {
 
+// Ta ut datan för kurser
+const courseData = data.filter(course => course.type === "Kurs" && course.admissionRound === "HT2023")
+                .sort((a, b) => b.applicantsTotal - a.applicantsTotal)
+                .slice(0, 6)
+                .map(course => ({
+                    name: course.name,
+                    applicantsTotal: course.applicantsTotal
+}));
+
+// Ta ut datan för program
+const programData = data.filter(course => course.type === "Program" && course.admissionRound === "HT2023")
+                .sort((a, b) => b.applicantsTotal - a.applicantsTotal)
+                .slice(0, 5)
+                .map(program => ({
+                    name: program.name,
+                    applicantsTotal: program.applicantsTotal
+}));
+
+    return { courseData, programData };
+}
 
 // Stapeldiagram 
+
+function displayCourses(courseData) {
+    const courseNames = courseData.map(course => course.name);
+    const applicantsTotals = courseData.map(course => course.applicantsTotal);
+
+    const courseNameAdjusted = courseNames.map(name => name.split(' '));
 
 const ctx = document.getElementById('barChart');
 
 const barChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: courseNameAdjusted.map(labels => labels.join('\n')),
       datasets: [{
         label: 'Mest sökta kurser',
-        data: [12, 19, 3, 5, 2, 3],
+        data: applicantsTotals,
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(255, 159, 64, 0.2)',
@@ -66,24 +95,26 @@ const barChart = new Chart(ctx, {
       scales: {
         y: {
           beginAtZero: true
-        }
+        },
+      x: {
+        display: window.innerWdith >= 700 // Kontrollera att x-axeln endast visas om fönstrets bredd är större eller lika med 700px
+      }
       }
     }
   });
-
-
+}
 
 // Cirkeldiagram
 
-const ctx2 = document.getElementById('pieChart');
+const ctx = document.getElementById('pieChart');
 
-const pieChart = new Chart(ctx2, {
+const pieChart = new Chart(ctx, {
     type: 'pie',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: programNames,
       datasets: [{
         label: 'Mest sökta program',
-        data: [12, 19, 3, 5, 2, 3],
+        data: applicantsTotals,
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(255, 159, 64, 0.2)',
