@@ -66,7 +66,7 @@ const ctx = document.getElementById('barChart');
 const barChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: courseNameAdjusted.map(labels => labels.join('\n')),
+      labels: courseNameAdjusted,
       datasets: [{
         label: 'Mest sökta kurser',
         data: applicantsTotals,
@@ -92,19 +92,20 @@ const barChart = new Chart(ctx, {
       }]
     },
     options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        },
-      x: {
-        display: window.innerWdith >= 700 // Kontrollera att x-axeln endast visas om fönstrets bredd är större eller lika med 700px
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
       }
-      }
-    }
-  });
-}
+    });
+  }
 
 // Cirkeldiagram
+
+function displayPrograms(programData) {
+    const programNames = programData.map(program => program.name);
+    const applicantsTotals = programData.map(program => program.applicantsTotal);
 
 const ctx = document.getElementById('pieChart');
 
@@ -144,3 +145,4 @@ const pieChart = new Chart(ctx, {
       }
     }
   });
+}
