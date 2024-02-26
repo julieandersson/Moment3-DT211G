@@ -1,3 +1,5 @@
+/* Karta hämtad med Leaflet.js och OpenStreetMap */
+
 "use strict";
 
 
