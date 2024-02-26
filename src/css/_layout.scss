@@ -384,8 +384,8 @@ article p {
 
 /* ---MEDIA QUERIES--- */
 
-/* MEDIA QUERY FÖR MENYN, GÖR SOM INLINE VID 1160PX */
-@media only screen and (min-width: 1160px) {
+/* MEDIA QUERY FÖR MENYN, GÖR SOM INLINE VID 1250PX */
+@media only screen and (min-width: 1250px) {
     header {
         padding: 0 3em;
     }
@@ -407,7 +407,7 @@ article p {
         position: static;
         box-shadow: 0 0px 0px;
         height: auto;
-        font-size: 1.4em;
+        font-size: 1.2em;
         width: auto;
     }
 
