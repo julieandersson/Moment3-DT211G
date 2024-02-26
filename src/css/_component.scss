@@ -54,3 +54,27 @@
     padding-right: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* Styling för diagram */
+
+#bar {
+  display: block;
+  margin-bottom: 50px;
+} 
+
+#pie {
+  width: 70%;
+  display: block;
+  padding-bottom: 5%;
+  margin: 0 auto;
+}
+
+/* Styling för karta */
+
+  #map {
+    height: 550px;
+    margin: 5%;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+  }
