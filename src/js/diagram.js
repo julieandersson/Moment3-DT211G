@@ -7,6 +7,28 @@ import { Colors } from 'chart.js';
 
 Chart.register(Colors);
 
+// Hämtar data för tabellerna från webbtjänst
+
+const url = "https://studenter.miun.se/~mallar/dt211g/";
+
+window.onload = init();
+
+async function init() {
+    try {
+        // Fetch-anrop
+        const response = await fetch(url);
+        let data = await response.json();
+
+        displayCourses(data);
+        displayPrograms(data);
+
+    } catch (e) {
+        console.log(e);
+        document.getElementById("error").innerHTML = "<p>Något gick fel, prova igen!</p>";
+    }
+}
+
+
 
 // Stapeldiagram 
 
@@ -48,6 +70,8 @@ const barChart = new Chart(ctx, {
       }
     }
   });
+
+
 
 // Cirkeldiagram
 
