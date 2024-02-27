@@ -58,14 +58,14 @@
 /* Styling för diagram */
 
 #bar {
-  width: 80%;
+  width: 70%;
   display: block;
   margin-bottom: 50px;
   margin: 0 auto;
 } 
 
 #pie {
-  width: 80%;
+  width: 60%;
   display: block;
   padding-bottom: 5%;
   margin: 0 auto;
@@ -79,4 +79,17 @@
     margin-bottom: 20px;
     border: 1px solid #000000;
     border-radius: 10px;
+  }
+
+  #search-form {
+    text-align: center; 
+}
+
+  #search-input {
+    width: 50%;
+  }
+
+  #search-button {
+    width: 5em;
+    height: 2.5em;
   }
