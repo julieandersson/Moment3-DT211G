@@ -34,3 +34,24 @@ var marker = new ol.Overlay({
 
 /* lägger till marköroverlayen till kartan */
 map.addOverlay(marker);
+
+/* Funktion för att centrera kartan på användarens plats */
+function centerMapOnUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var userPosition = ol.proj.fromLonLat([position.coords.longitude, position.coords.latitude]);
+            map.getView().setCenter(userPosition);
+
+            /* Skapa en markör för användarens position */
+            var markerElement = marker.getElement();
+            markerElement.className = 'user-marker';
+            /* Flytta markören till användarens position på kartan */
+            marker.setPosition(userPosition); 
+        });
+    } else {
+        console.error('Geolocation stöds inte av den här webbläsaren.');
+    }
+}
+
+/* hämtar funktionen för att centrera kartan på användarens plats */
+centerMapOnUserLocation();
