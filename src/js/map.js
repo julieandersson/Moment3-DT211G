@@ -1,8 +1,4 @@
-/* Hämta karta */
+/* Hämtar karta från OpenLayers */
 
 "use strict";
-
-
-
-
 

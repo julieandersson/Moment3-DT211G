@@ -71,27 +71,19 @@
   margin: 0 auto;
 }
 
-/* Styling för karta */
+/* Styling för sök-formulär */
 
-  #map {
-    height: 550px;
-    margin: 5%;
-    margin-bottom: 20px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-  }
-
-/* Styling för sök-funktion till kartan */
-
-  #search-form {
-    text-align: center; 
+#search-form {
+  text-align: center; 
 }
 
-  #search-input {
-    width: 50%;
-  }
+#search-input {
+  width: 50%;
+}
 
-  #search-button {
-    width: 5em;
-    height: 2.5em;
-  }
+#search-button {
+  width: 5em;
+  height: 2.5em;
+  background-color: rgb(76, 177, 255);
+  border-radius: 5px;
+}
