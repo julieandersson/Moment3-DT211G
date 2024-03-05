@@ -25,3 +25,12 @@ var map = new ol.Map({
     })
 });
 
+/* Markör för användarens position */
+var marker = new ol.Overlay({
+    positioning: 'center-center',
+    element: document.createElement('div'),
+    stopEvent: false
+});
+
+/* lägger till marköroverlayen till kartan */
+map.addOverlay(marker);
