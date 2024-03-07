@@ -73,9 +73,28 @@ async function searchPlace(query) {
             console.error('Inga resultat hittades för sökningen.');
             return null;
         }
-        
+
     } catch (error) {
         console.error('Fel uppstod vid sökning:', error);
         return null;
     }
 }
+
+
+/* Lyssna på formuläret för platssökning */
+document.getElementById('search-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Förhindra standardbeteendet för formuläret
+
+    /* Hämtar sökfrågan från inputfältet */
+    const query = document.getElementById('search-input').value;
+
+    const coordinates = await searchPlace(query);
+
+    if (coordinates) {
+        /* placera kartan på den sökta platsen */
+        map.getView().setCenter(ol.proj.fromLonLat(coordinates));
+
+        /* Flytta markören */
+        marker.setPosition(ol.proj.fromLonLat(coordinates));
+    }
+});
