@@ -55,3 +55,27 @@ function centerMapOnUserLocation() {
 
 /* hämtar funktionen för att centrera kartan på användarens plats */
 centerMapOnUserLocation();
+
+/* Funktion för platssökning med Nominatim API */
+async function searchPlace(query) {
+    try {
+        
+        const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}`);
+        const data = await response.json();
+
+        /* Kontrollera om platsen finns */
+        if (data && data.length > 0) {
+            
+            const latitude = parseFloat(data[0].lat);
+            const longitude = parseFloat(data[0].lon);
+            return [longitude, latitude];
+        } else {
+            console.error('Inga resultat hittades för sökningen.');
+            return null;
+        }
+        
+    } catch (error) {
+        console.error('Fel uppstod vid sökning:', error);
+        return null;
+    }
+}
