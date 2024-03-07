@@ -96,5 +96,9 @@ document.getElementById('search-form').addEventListener('submit', async function
 
         /* Flytta markören */
         marker.setPosition(ol.proj.fromLonLat(coordinates));
+
+    } else {
+        alert('Platsen hittades inte.');
+
     }
 });
